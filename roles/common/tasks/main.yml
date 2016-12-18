@@ -1,5 +1,4 @@
 ---
-  - name
   - name: Set bash colors
     replace:
        dest: ~/.bashrc
