@@ -8,8 +8,8 @@ Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
 
 ### Install
 ```
-sudo apt install software-properties-common && apt-add-repository ppa:ansible/ansible
-sudo apt update && sudo apt install ansible git pip
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt -y update && sudo apt -y install ansible git pip software-properties-common
 ```
 
 ### Launch
