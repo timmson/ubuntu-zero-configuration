@@ -2,8 +2,6 @@
 
 Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
 
-(image must be placed here)
-
 ### Requirements
 
  * Ubuntu/Xubuntu x64 standard host image
