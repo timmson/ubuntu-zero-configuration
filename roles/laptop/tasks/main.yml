@@ -1,4 +1,4 @@
 ---
-  - name: Set bash colors
+  - name: Set laptop mode
     shell: echo 5 > /proc/sys/vm/laptop_mode
     become: true

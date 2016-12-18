@@ -8,8 +8,8 @@ Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
  
 ### Available tags
  * Desktop (common and client tasks)
- * Laptop (common, client and laptop-specific tasks)
- * Server (common and server tasks)
+ * Laptop  (common, client and laptop-specific tasks)
+ * Server  (common and server tasks)
 
 ### Install (run as root)
 ```
