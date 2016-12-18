@@ -1,4 +1,5 @@
 ---
+  - name
   - name: Set bash colors
     replace:
        dest: ~/.bashrc
@@ -11,6 +12,12 @@
        regexp: 'enabled=1'
        replace: 'enabled=0'
     become: true
+
+  - name: Copy template file
+    templates:
+    template:
+      src: sources.list
+      dest: /etc/apt/sources.list
 
   - name: Add Java repository to sources
     apt_repository:
