@@ -16,6 +16,7 @@
     template:
       src: sources.list
       dest: /etc/apt/sources.list
+    become: true
 
   - name: Add Java repository to sources
     apt_repository:
