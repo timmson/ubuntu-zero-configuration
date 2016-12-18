@@ -18,19 +18,13 @@
       dest: /etc/apt/sources.list
     become: true
 
-  - name: Setup arch
-    template:
-      src: arch
-      dest: /var/lib/dpkg/arch
-    become: true
-
   - name: Add Java repository to sources
     apt_repository:
       repo: 'ppa:webupd8team/java'
     become: true
 
   - name: Autoaccept license for Java
-    shell: echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+    shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
     become: true
 
   - name: Upgrade packages
@@ -49,10 +43,6 @@
     become: true
     with_items:
       - preload
-      - gimp
-      - skype
-      - chromium-browser
-      - gthumb
       - rar
       - unrar
       - bmon
@@ -63,6 +53,4 @@
       - cpufrequtils
       - lm-sensors
       - trash-cli
-      - gnome-system-monitor
-      - gparted
       - oracle-java8-installer

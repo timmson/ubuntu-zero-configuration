@@ -1,0 +1,31 @@
+---
+  - name: Setup arch
+    lineinfile:
+      dest: '/var/lib/dpkg/arch'
+      line: "{{ item }}"
+      create: yes
+    with_items:
+      - amd64
+      - i386
+
+  - name: Upgrade packages
+    apt:
+      upgrade: yes
+      update_cache: yes
+      force: yes
+      state: present
+    become: true
+
+  - name: Install packages
+    apt:
+      name: "{{item}}"
+      force: yes
+      state: present
+    become: true
+    with_items:
+        - gimp
+        - skype
+        - chromium-browser
+        - gthumb
+        - gnome-system-monitor
+        - gparted

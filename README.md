@@ -8,7 +8,7 @@ Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
 
 ### Install (run as root)
 ```
-#apt -y install software-properties-common aptitude apport
+#apt update && apt -y install software-properties-common aptitude apport
 apt-add-repository -y ppa:ansible/ansible
 apt update
 apt -y install ansible git
