@@ -1,0 +1,7 @@
+---
+- name: Ubuntu zero configuraion
+  hosts: all
+  roles:
+     - common
+     - laptop
+     - remote

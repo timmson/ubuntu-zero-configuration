@@ -1,0 +1,3 @@
+---
+  - name: Set bash colors
+    shell: echo 5 > /proc/sys/vm/laptop_mode

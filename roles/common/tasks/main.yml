@@ -1,0 +1,51 @@
+---
+  - name: Set bash colors
+    replace:
+       dest: ~/.bashrc
+       regexp: '#force_color_prompt=yes'
+       replace: 'force_color_prompt=yes'
+
+  - name: Turn apport off
+    replace:
+       dest: /etc/default/apport
+       regexp: 'enabled=1'
+       replace: 'enabled=0'
+
+  - name: Add Java repository to sources
+    apt_repository:
+      repo: 'ppa:webupd8team/java'
+
+  - name: Autoaccept license for Java
+    shell: echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+
+  - name: Upgrade packages
+    apt:
+      upgrade: yes
+      update_cache: yes
+      force: yes
+      state: present
+
+  - name: Install packages
+    apt:
+      name: "{{item}}"
+      force: yes
+      state: present
+    with_items:
+      - preload
+      - gimp
+      - skype
+      - chromium-browser
+      - gthumb
+      - rar
+      - unrar
+      - bmon
+      - htop
+      - tmux
+      - guake
+      - iotop
+      - cpufrequtils
+      - lm-sensors
+      - trash-cli
+      - gnome-system-monitor
+      - gparted
+      - oracle-java8-installer
