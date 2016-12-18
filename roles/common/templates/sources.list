@@ -1,8 +1,10 @@
 deb http://archive.ubuntu.com/ubuntu/ {{ ansible_lsb.codename|lower }} main restricted
 deb http://archive.ubuntu.com/ubuntu/ {{ ansible_lsb.codename|lower }} universe
+deb http://archive.ubuntu.com/ubuntu/ {{ ansible_lsb.codename|lower }} multiverse
 
 deb http://archive.ubuntu.com/ubuntu/ {{ ansible_lsb.codename|lower }}-updates main restricted
 deb http://archive.ubuntu.com/ubuntu/ {{ ansible_lsb.codename|lower }}-updates universe
+deb http://archive.ubuntu.com/ubuntu/ {{ ansible_lsb.codename|lower }}-updates multiverse
 
 deb http://archive.ubuntu.com/ubuntu/ {{ ansible_lsb.codename|lower }}-security main restricted
 deb http://archive.ubuntu.com/ubuntu/ {{ ansible_lsb.codename|lower }}-security universe
