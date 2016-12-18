@@ -6,15 +6,18 @@ Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
 
  * Ubuntu/Xubuntu x64 standard host image
 
-### Install
+### Install (run as root)
 ```
-sudo apt-add-repository ppa:ansible/ansible
-sudo apt -y update && sudo apt -y install ansible git software-properties-common
+#apt -y install software-properties-common aptitude
+apt-add-repository -y ppa:ansible/ansible
+apt update
+apt -y dist-upgrade
+apt -y install ansible git
 ```
 
 ### Launch
 ```
-git clone https://github.com/timmson/ubuntu-zero-configuration.git
+git clone https://github.com/timmson/ubuntu-zero-configuration.git && cd ubuntu-zero-configuration 
 ansible-playbook -i "localhost," -c local site.yml
 ```
 
