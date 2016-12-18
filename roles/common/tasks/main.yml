@@ -12,10 +12,16 @@
        replace: 'enabled=0'
     become: true
 
-  - name: Copy template file
+  - name: Setup sources.list
     template:
       src: sources.list
       dest: /etc/apt/sources.list
+    become: true
+
+  - name: Setup arch
+    template:
+      src: arch
+      dest: /var/lib/dpkg/arch
     become: true
 
   - name: Add Java repository to sources
