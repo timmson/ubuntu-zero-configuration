@@ -4,6 +4,7 @@
       dest: '/var/lib/dpkg/arch'
       line: "{{ item }}"
       create: yes
+    become: true
     with_items:
       - amd64
       - i386

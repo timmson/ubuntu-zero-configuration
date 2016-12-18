@@ -2,7 +2,7 @@
 - name: Ubuntu zero configuraion
   hosts: all
   roles:
-     - common
-     - client
-     - laptop
-     - server
+     - {role: common, tags: ['desktop', 'laptop', 'server']}
+     - {role: client, tags: ['desktop', 'laptop']}
+     - {role: laptop, tags: ['laptop']}
+     - {role: server, tags: ['server']}
