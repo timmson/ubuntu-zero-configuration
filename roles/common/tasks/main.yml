@@ -13,7 +13,6 @@
     become: true
 
   - name: Copy template file
-    templates:
     template:
       src: sources.list
       dest: /etc/apt/sources.list
