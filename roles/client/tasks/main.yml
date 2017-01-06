@@ -4,7 +4,7 @@
       dest: '/var/lib/dpkg/arch'
       line: "{{ item }}"
       create: yes
-    become: true
+    become: yes
     with_items:
       - amd64
       - i386
@@ -15,14 +15,14 @@
       update_cache: yes
       force: yes
       state: present
-    become: true
+    become: yes
 
   - name: Install packages
     apt:
       name: "{{item}}"
       force: yes
       state: present
-    become: true
+    become: yes
     with_items:
         - gimp
         - skype

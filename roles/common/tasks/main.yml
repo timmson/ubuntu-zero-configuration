@@ -1,31 +1,35 @@
 ---
   - name: Set bash colors
     replace:
-       dest: ~/.bashrc
+       dest: "{{ item }}"
        regexp: '#force_color_prompt=yes'
        replace: 'force_color_prompt=yes'
+    become: yes
+    with_items:
+       - "/root/.bashrc"
+       - "/home/{{ ansible_user_id }}/.bashrc"
 
   - name: Turn apport off
     replace:
        dest: /etc/default/apport
        regexp: 'enabled=1'
        replace: 'enabled=0'
-    become: true
+    become: yes
 
-  - name: Setup sources.list
+  - name: Setup sources.list.j2
     template:
-      src: sources.list
-      dest: /etc/apt/sources.list
-    become: true
+      src: sources.list.j2
+      dest: /etc/apt/sources.list.j2
+    become: yes
 
   - name: Add Java repository to sources
     apt_repository:
       repo: 'ppa:webupd8team/java'
-    become: true
+    become: yes
 
   - name: Autoaccept license for Java
     shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-    become: true
+    become: yes
 
   - name: Upgrade packages
     apt:
@@ -33,14 +37,14 @@
       update_cache: yes
       force: yes
       state: present
-    become: true
+    become: yes
 
   - name: Install packages
     apt:
       name: "{{item}}"
       force: yes
       state: present
-    become: true
+    become: yes
     with_items:
       - preload
       - rar

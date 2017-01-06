@@ -1,0 +1,13 @@
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }} main restricted
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }} universe
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }} multiverse
+
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }}-updates main restricted
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }}-updates universe
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }}-updates multiverse
+
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }}-security main restricted
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }}-security universe
+deb {{ apt_server }} {{ ansible_lsb.codename|lower }}-security multiverse
+
+deb http://archive.canonical.com/ubuntu {{ ansible_lsb.codename|lower }} partner

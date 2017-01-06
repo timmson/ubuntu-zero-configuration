@@ -5,6 +5,6 @@
       update_cache: yes
       force: yes
       state: present
-    become: true
+    become: yes
     with_items:
       - openssh-server
