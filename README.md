@@ -7,9 +7,10 @@ Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
  * Ubuntu/Xubuntu x64 standard host image
  
 ### Available tags
- * Desktop (common and client tasks)
- * Laptop  (common, client and laptop-specific tasks)
- * Server  (common and server tasks)
+ * windows (common and specific tasks)
+ * desktop (common and client tasks)
+ * laptop  (common, client and laptop-specific tasks)
+ * server  (common and server tasks)
 
 ### Install (run as root)
 ```

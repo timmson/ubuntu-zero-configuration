@@ -16,12 +16,6 @@
        replace: 'enabled=0'
     become: yes
 
-  - name: Setup sources.list.j2
-    template:
-      src: sources.list.j2
-      dest: /etc/apt/sources.list.j2
-    become: yes
-
   - name: Add Java repository to sources
     apt_repository:
       repo: 'ppa:webupd8team/java'
@@ -29,14 +23,6 @@
 
   - name: Autoaccept license for Java
     shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-    become: yes
-
-  - name: Upgrade packages
-    apt:
-      upgrade: yes
-      update_cache: yes
-      force: yes
-      state: present
     become: yes
 
   - name: Install packages

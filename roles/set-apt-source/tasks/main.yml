@@ -1,0 +1,14 @@
+---
+  - name: Setup sources.list.j2
+    template:
+      src: sources.list.j2
+      dest: /etc/apt/sources.list
+    become: yes
+
+  - name: Upgrade packages
+    apt:
+      upgrade: yes
+      update_cache: yes
+      force: yes
+      state: present
+    become: yes

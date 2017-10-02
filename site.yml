@@ -2,6 +2,7 @@
 - name: Ubuntu zero configuraion
   hosts: all
   roles:
+     - {role: set-apt-source, tags: ['desktop', 'laptop', 'server', 'windows']}
      - {role: common, tags: ['desktop', 'laptop', 'server']}
      - {role: client, tags: ['desktop', 'laptop']}
      - {role: laptop, tags: ['laptop']}

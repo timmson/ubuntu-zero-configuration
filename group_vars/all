@@ -1,2 +1,2 @@
-apt_server: 'http://archive.ubuntu.com/ubuntu/'
-#apt_server: "https://mirror.yandex.ru/ubuntu/"
+#apt_server: 'http://archive.ubuntu.com/ubuntu/'
+apt_server: 'https://mirror.yandex.ru/ubuntu/'
