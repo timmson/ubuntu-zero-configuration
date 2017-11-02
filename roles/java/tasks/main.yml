@@ -1,12 +1,12 @@
 ---
   - name: Add Java repository to sources
-      apt_repository:
+    apt_repository:
       repo: 'ppa:webupd8team/java'
-      become: yes
+    become: yes
 
   - name: Autoaccept license for Java
-      shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-      become: yes
+    shell: echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+    become: yes
 
   - name: Install packages
     apt:
