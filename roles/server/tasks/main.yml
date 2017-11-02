@@ -8,3 +8,4 @@
     become: yes
     with_items:
       - openssh-server
+      - python-pip

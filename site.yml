@@ -7,3 +7,4 @@
      - {role: client, tags: ['desktop', 'laptop']}
      - {role: laptop, tags: ['laptop']}
      - {role: server, tags: ['server']}
+     - {role: docker, tags: ['server']}

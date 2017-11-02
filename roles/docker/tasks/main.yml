@@ -1,0 +1,34 @@
+---
+  - name: Add Docker GPG key into apt
+    apt_key:
+      url: "{{ docker_key_url }}"
+#      id: "{{ docker_key_id }}"
+      state: present
+    become: yes
+
+  - name: Add Docker repository
+    apt_repository:
+      repo: "{{ docker_deb_url }}"
+      filename: nodesource
+      state: present
+    become: yes
+
+  - name: Install Docker packages
+    apt:
+      name: "{{ item }}"
+      update_cache: yes
+      force: yes
+      state: present
+    become: yes
+    with_items:
+      - docker
+      - python-pip
+
+  - name: Install Docker Compose
+    pip:
+      name: "{{ item }}"
+      state: present
+    become: yes
+    with_items:
+      - docker-py
+      - docker-compose
