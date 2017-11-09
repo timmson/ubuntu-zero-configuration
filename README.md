@@ -3,7 +3,7 @@ Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
 
 ## Requirements
 
- * Ubuntu/Xubuntu x64 standard host image
+ * Ubuntu/Xubuntu x64 standard host image (or Windows 10 Bash for --tags=windows)
  
 ## Available tags
  * windows (common and specific tasks)
@@ -15,6 +15,11 @@ Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
 
 ### Local machine (host)
 #### Install Git,Ansible
+##### Windows
+ * [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+ * [Ansible on Windows](http://www.tomsitpro.com/articles/how-to-use-ansible-on-windows,1-3479.html) 
+
+##### Linux
 ```
 sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt update
@@ -29,6 +34,11 @@ ansible-playbook -i "localhost," -c local site.yml --tags desktop
 
 ### Virtual machine via Vagrant / Virtualbox
 #### Install Git,Vagrant,Virtualbox
+##### Windows
+ * [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+ * [Installing Vagrant & VirtualBox](https://www.sitepoint.com/getting-started-vagrant-windows/)
+
+##### Linux
 ```
 sudo apt update
 sudo apt -y install vagrant virtualbox git
