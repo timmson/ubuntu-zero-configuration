@@ -21,7 +21,7 @@
       state: present
     become: yes
     with_items:
-      - docker
+      - docker-ce
       - python-pip
 
   - name: Install Docker Compose
@@ -30,5 +30,12 @@
       state: present
     become: yes
     with_items:
-      - docker
+      - docker-py
       - docker-compose
+
+  - name: Adding current user Docker rights
+    user:
+      name: "{{ lookup('env','USER') }}"
+      groups: docker
+      append: yes
+    become: yes
