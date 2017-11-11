@@ -30,7 +30,7 @@
       state: present
     become: yes
     with_items:
-      - docker-py
+      - docker
       - docker-compose
 
   - name: Adding current user Docker rights
