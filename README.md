@@ -25,6 +25,10 @@ sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt update
 sudo apt -y install ansible git
 ```
+### Create user (if not exist)
+```
+useradd user -s /bin/bash -G sudo -md /home/user && sed -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
+```
 
 #### Launch
 ```
