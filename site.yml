@@ -2,10 +2,8 @@
 - name: Ubuntu zero configuraion
   hosts: all
   roles:
-    - {role: client, tags: ['desktop', 'laptop']}
     - {role: common, tags: ['desktop', 'laptop', 'server' , 'windows']}
     - {role: docker, tags: ['server']}
-    - {role: java,   tags: ['desktop', 'laptop']}
     - {role: laptop, tags: ['laptop']}
     - {role: set-apt-source, tags: ['desktop', 'laptop', 'server', 'windows']}
     - {role: ssh, tags: ['server']}

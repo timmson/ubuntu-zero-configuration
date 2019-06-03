@@ -34,7 +34,7 @@ sed -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /
 #### Launch
 ```
 git clone https://github.com/timmson/ubuntu-zero-configuration.git && cd ubuntu-zero-configuration 
-ansible-playbook -i "localhost," -c local site.yml --tags desktop
+ansible-playbook -i "localhost," -c local site.yml --tags desktop -K
 ```
 
 ### Virtual machine via Vagrant / Virtualbox

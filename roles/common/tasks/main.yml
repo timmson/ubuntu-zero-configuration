@@ -18,19 +18,7 @@
 
   - name: Install packages
     apt:
-      name: "{{item}}"
+      name: "['preload', 'rar', 'unrar', 'bmon', 'htop', 'tmux', 'guake', 'iotop', 'cpufrequtils', 'lm-sensors', 'trash-cli', 'openjdk-11-jdk']"
       force: yes
       state: present
     become: yes
-    with_items:
-      - preload
-      - rar
-      - unrar
-      - bmon
-      - htop
-      - tmux
-      - guake
-      - iotop
-      - cpufrequtils
-      - lm-sensors
-      - trash-cli
