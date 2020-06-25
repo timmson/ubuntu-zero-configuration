@@ -8,17 +8,3 @@
     with_items:
        - "/root/.bashrc"
        - "/home/{{ ansible_user_id }}/.bashrc"
-
-  - name: Turn apport off
-    replace:
-       dest: /etc/default/apport
-       regexp: 'enabled=1'
-       replace: 'enabled=0'
-    become: yes
-
-  - name: Install packages
-    apt:
-      name: "['preload', 'rar', 'unrar', 'bmon', 'htop', 'tmux', 'guake', 'iotop', 'cpufrequtils', 'lm-sensors', 'trash-cli', 'openjdk-11-jdk']"
-      force: yes
-      state: present
-    become: yes

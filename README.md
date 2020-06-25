@@ -1,12 +1,11 @@
 # Ubuntu zero configuration
-Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
 
 ## Requirements
 
- * Ubuntu/Xubuntu x64 standard host image (or Windows 10 Bash for --tags=windows)
+ * Ubuntu/Xubuntu x64 standard host image (or Windows 10 Bash for --tags=wsl)
  
 ## Available tags
- * windows (common and specific tasks)
+ * wsl (common and specific tasks)
  * desktop (common and client tasks)
  * laptop  (common, client and laptop-specific tasks)
  * server  (common and server tasks)
@@ -15,9 +14,8 @@ Author: [timmson666@mail.ru](mailto:timmson666@mail.ru)
 
 ### Local machine (host)
 #### Install Git,Ansible
-##### Windows
- * [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
- * [Ansible on Windows](http://www.tomsitpro.com/articles/how-to-use-ansible-on-windows,1-3479.html) 
+##### WSL (Windows Subsystem for Linux) 
+ * [Intall WSL](https://docs.microsoft.com/en-US/windows/wsl/install-win10)
 
 ##### Linux
 ```

@@ -2,8 +2,10 @@
 - name: Ubuntu zero configuraion
   hosts: all
   roles:
-    - {role: common, tags: ['desktop', 'laptop', 'server' , 'windows']}
+    - {role: common, tags: ['desktop', 'laptop', 'server', 'wsl']}
+    - {role: disable-apport, tags: ['desktop', 'laptop', 'server']}
     - {role: docker, tags: ['server']}
+    - {role: install-utilities, tags: ['desktop', 'laptop']}
     - {role: laptop, tags: ['laptop']}
-    - {role: set-apt-source, tags: ['desktop', 'laptop', 'server', 'windows']}
+    - {role: set-apt-source, tags: ['desktop', 'laptop', 'server', 'wsl']}
     - {role: ssh, tags: ['server']}
