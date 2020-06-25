@@ -5,6 +5,8 @@
     - {role: common, tags: ['desktop', 'laptop', 'server', 'wsl']}
     - {role: disable-apport, tags: ['desktop', 'laptop', 'server']}
     - {role: docker, tags: ['server']}
+    - {role: install-java, tags: ['java']}
+    - {role: install-node, tags: ['node']}
     - {role: install-utilities, tags: ['desktop', 'laptop']}
     - {role: laptop, tags: ['laptop']}
     - {role: set-apt-source, tags: ['desktop', 'laptop', 'server', 'wsl']}

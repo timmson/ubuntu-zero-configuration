@@ -1,7 +1,29 @@
 ---
-  - name: Install packages
+
+  - name: Add key
+    apt_key:
+      url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+      state: present
+    become: yes
+
+  - name: Add repostitory
+    apt_repository:
+      repo: deb https://deb.nodesource.com/node_10.x {{ ansible_lsb.codename|lower }} main
+      state: present
+      filename: node
+    become: yes
+
+  - name: Upgrade packages
     apt:
-      name: "['openjdk-11-jdk']"
+      upgrade: yes
+      update_cache: yes
+      force: yes
+      state: present
+    become: yes
+
+  - name: Install Node
+    apt:
+      name: "['nodejs']"
       force: yes
       state: present
     become: yes
