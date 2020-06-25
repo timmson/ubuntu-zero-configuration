@@ -1,2 +1,4 @@
 #apt_server: 'http://archive.ubuntu.com/ubuntu/'
 apt_server: 'https://mirror.yandex.ru/ubuntu/'
+node_version: 12
+java_version: 11
